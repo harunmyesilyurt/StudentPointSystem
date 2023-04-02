@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// tarih ve öğrenci yapıları
+// tarih ve Ã¶Ã°renci yapÃ½larÃ½
 struct Tarih
 {
 	unsigned int Gun;
@@ -23,8 +23,8 @@ struct Ogrenci
 	float Vize;
 	float Final;
 	float Proje;
-	float KısaSınav1;
-	float KısaSınav2;
+	float KÃ½saSÃ½nav1;
+	float KÃ½saSÃ½nav2;
 	float Odev1;
 	float Odev2;
 	float Ortalama;
@@ -77,8 +77,8 @@ string harfNotu(int ogrenciNotu)
 		return "FF";
 	}
 }
-//Her seçenek için fonksionlar
-float EnYuk()//1. seçeneğin fonksiyonu
+//Her seÃ§enek iÃ§in fonksionlar
+float EnYuk()//1. seÃ§eneÃ°in fonksiyonu
 {
 	float Enbuyuk = ogrenciler[0].Ortalama;
 
@@ -108,7 +108,7 @@ float EnYuk()//1. seçeneğin fonksiyonu
 		return EnYuk();
 	}
 }
-float EnDus()//2. seçeneğin fonksiyonu
+float EnDus()//2. seÃ§eneÃ°in fonksiyonu
 {
 	float EnKucuk = ogrenciler[0].Ortalama;
 
@@ -139,7 +139,7 @@ float EnDus()//2. seçeneğin fonksiyonu
 	}
 }
 float NotOrt;
-float Ort()//3. seçeneğin fonksiyonu
+float Ort()//3. seÃ§eneÃ°in fonksiyonu
 {
 	float Ortalama = 0;
 
@@ -147,7 +147,7 @@ float Ort()//3. seçeneğin fonksiyonu
 
 	for (int i = 0; i < 100; i++)
 	{
-		Ortalama += ogrenciler[i].Ortalama; //notların ortalaması alındı
+		Ortalama += ogrenciler[i].Ortalama; //notlarÃ½n ortalamasÃ½ alÃ½ndÃ½
 	}
 
 	NotOrt = Ortalama / 100;
@@ -182,7 +182,7 @@ float SapmaHesaplama(float NotOrtalama)//Standart sapma hesaplama fonksiyonu
 	return Sonuc;
 }
 
-float StdSapma()//4. seçeneğin fonksiyonu
+float StdSapma()//4. seÃ§eneÃ°in fonksiyonu
 {
 	string Deger;
 
@@ -204,7 +204,7 @@ float StdSapma()//4. seçeneğin fonksiyonu
 	}
 }
 
-void AdSoyad(int min, int max)//Ad ve soyadın seçenekler için birleştiği fonksiyon
+void AdSoyad(int min, int max)//Ad ve soyadÃ½n seÃ§enekler iÃ§in birleÃ¾tiÃ°i fonksiyon
 {
 	for (int i = 0; i < 100; i++)
 	{
@@ -218,7 +218,7 @@ void AdSoyad(int min, int max)//Ad ve soyadın seçenekler için birleştiği fonksiy
 
 }
 
-float BelAralık()//5. seçeneğin fonksiyonu
+float BelAralÃ½k()//5. seÃ§eneÃ°in fonksiyonu
 {
 	string Deger;
 
@@ -235,11 +235,11 @@ float BelAralık()//5. seçeneğin fonksiyonu
 	else
 	{
 		system("cls");
-		return BelAralık();
+		return BelAralÃ½k();
 	}
 }
 
-float DegAlt()//6. seçeneğin fonksiyonu
+float DegAlt()//6. seÃ§eneÃ°in fonksiyonu
 {
 
 	string Deger;
@@ -262,7 +262,7 @@ float DegAlt()//6. seçeneğin fonksiyonu
 	}
 }
 
-float DegUst()//7. seçeneğin fonksiyonu
+float DegUst()//7. seÃ§eneÃ°in fonksiyonu
 {
 	string Deger;
 
@@ -284,7 +284,7 @@ float DegUst()//7. seçeneğin fonksiyonu
 	}
 }
 
-void ListeYazdırma(int min, int max)//Liste seçeneği için ad soyad fonksiyonu
+void ListeYazdÃ½rma(int min, int max)//Liste seÃ§eneÃ°i iÃ§in ad soyad fonksiyonu
 {
 	for (int i = min; i <= max; i++)
 	{
@@ -292,7 +292,7 @@ void ListeYazdırma(int min, int max)//Liste seçeneği için ad soyad fonksiyonu
 		cout << "Student's name and surname : " << AdSoyadL << endl;
 	}
 }
-float Liste()//8. seçeneğin fonksiyonu
+float Liste()//8. seÃ§eneÃ°in fonksiyonu
 {
 	int i = 0, j = 20;
 	string Deger;
@@ -300,7 +300,7 @@ float Liste()//8. seçeneğin fonksiyonu
 	{
 		int Deger;
 
-		ListeYazdırma(i, j);
+		ListeYazdÃ½rma(i, j);
 
 		cout << "Press 0 to exit the list...";
 
@@ -337,7 +337,7 @@ float Liste()//8. seçeneğin fonksiyonu
 	}
 }
 
-//menü sistemi
+//menÃ¼ sistemi
 int RastgeleAtama()
 {
 	int Secenekler;
@@ -362,7 +362,7 @@ int RastgeleAtama()
 
 	cin >> Secenekler;
 
-	switch (Secenekler)//Seçeneklerin toplanması ve ataması
+	switch (Secenekler)//SeÃ§eneklerin toplanmasÃ½ ve atamasÃ½
 	{
 	case 1:
 		system("cls");
@@ -383,7 +383,7 @@ int RastgeleAtama()
 		break;
 	case 5:
 		system("cls");
-		return BelAralık();
+		return BelAralÃ½k();
 		break;
 	case 6:
 		system("cls");
@@ -404,7 +404,7 @@ int RastgeleAtama()
 	return 0;
 }
 
-float Kontrol(string s, float min, float max)//Sayı kontrol fonksiyonu
+float Kontrol(string s, float min, float max)//SayÃ½ kontrol fonksiyonu
 {
 	float Sayi1;
 	do
@@ -426,7 +426,7 @@ float TarihKontrol(string s, float min, float max)//Tarih kontrol fonksiyonu
 	return Dogum;
 }
 
-float Ortalama(string s, float Final, float Vize, float Proje, float KisaSinav1, float KisaSinav2, float Odev1, float Odev2)//Öğrencilerin sıavlara göre ortalama hesabı
+float Ortalama(string s, float Final, float Vize, float Proje, float KisaSinav1, float KisaSinav2, float Odev1, float Odev2)//Ã–Ã°rencilerin sÃ½avlara gÃ¶re ortalama hesabÃ½
 {
 	float Ort = 0;
 
@@ -435,14 +435,14 @@ float Ortalama(string s, float Final, float Vize, float Proje, float KisaSinav1,
 	return Ort;
 }
 
-int RandomNum(int max, int min = 0)//Random sayı oluşturma 
+int RandomNum(int max, int min = 0)//Random sayÃ½ oluÃ¾turma 
 {
 	int a = rand();
 	int Number = a % (max - min + 1) + min;
 	return Number;
 }
 
-void StudentAddAverage(int _i, int must, int RandMax, int RandMin = 0)//Notları random atama fonksionu
+void StudentAddAverage(int _i, int must, int RandMax, int RandMin = 0)//NotlarÃ½ random atama fonksionu
 {
 	for (int i = _i; i < must; i++)
 	{
@@ -461,7 +461,7 @@ void STudentManuelRecord(int i)
 	cout << "Enter student's id : " << endl;
 	cin >> ogrenciler[i].No;
 
-	//Değerlerin doğru aralıkta yazıldığı kontrol 
+	//DeÃ°erlerin doÃ°ru aralÃ½kta yazÃ½ldÃ½Ã°Ã½ kontrol 
 	ogrenciler[i].DogumTarihi.Gun = TarihKontrol("Enter the day the student was born (1,31) : ", 1, 31);
 
 	ogrenciler[i].DogumTarihi.Ay = TarihKontrol("Enter the month the student was born (1,12) : ", 1, 12);
@@ -470,9 +470,9 @@ void STudentManuelRecord(int i)
 
 	ogrenciler[i].Final = Kontrol("Enter the student's final grade :", 0, 100);
 
-	ogrenciler[i].KısaSınav1 = Kontrol("Enter the student's 1st quiz grade : ", 0, 100);
+	ogrenciler[i].KÃ½saSÃ½nav1 = Kontrol("Enter the student's 1st quiz grade : ", 0, 100);
 
-	ogrenciler[i].KısaSınav2 = Kontrol("Enter the student's 2nd quiz grade : ", 0, 100);
+	ogrenciler[i].KÃ½saSÃ½nav2 = Kontrol("Enter the student's 2nd quiz grade : ", 0, 100);
 
 	ogrenciler[i].Odev1 = Kontrol("Enter the student's 1st homework grade: ", 0, 100);
 
@@ -487,12 +487,12 @@ void STudentManuelRecord(int i)
 }
 int main()
 {
-	setlocale(LC_ALL, "Turkish");//Türkçe dilini kullanmak için atama
-	//Hazırlanan isim ve soyisimler
-	string Isimler[30] = { "Harun","Batuhan","Emir","Gökberk","Mahmut","Adem","Kaan","Cemil","Hüseyin","Osman","Ali","Mehmet","Mustafa","Celal","Ertuğrul","Ayşe","Esma","Fatmanur","Ela","Sıla","Sude","Beyzanur","Ceren","Buse","Eda","İrem","Melisa","Nurdan","Dilek","Hatice" };
-	string Soyadlar[30] = { "Yılmaz","Yeşilyurt","Bahayetmez","Özbay","Özbey","Eski","Öz","Kaplan","Yırtıcı","Manço","Akarsu","Koray","Meriç","Biler","Armutçu","Demirkan","Utangaç","İlkan","Cepkin","Çepni","Tekin","Sanlısoy","Ünnü","Türkcan","Cansu","Çınar","Çal","Vardar","Göbekli","Gönülcü" };
+	setlocale(LC_ALL, "Turkish");//TÃ¼rkÃ§e dilini kullanmak iÃ§in atama
+	//HazÃ½rlanan isim ve soyisimler
+	string Isimler[30] = { "Harun","Batuhan","Emir","GÃ¶kberk","Mahmut","Adem","Kaan","Cemil","HÃ¼seyin","Osman","Ali","Mehmet","Mustafa","Celal","ErtuÃ°rul","AyÃ¾e","Esma","Fatmanur","Ela","SÃ½la","Sude","Beyzanur","Ceren","Buse","Eda","Ãrem","Melisa","Nurdan","Dilek","Hatice" };
+	string Soyadlar[30] = { "YÃ½lmaz","YeÃ¾ilyurt","Bahayetmez","Ã–zbay","Ã–zbey","Eski","Ã–z","Kaplan","YÃ½rtÃ½cÃ½","ManÃ§o","Akarsu","Koray","MeriÃ§","Biler","ArmutÃ§u","Demirkan","UtangaÃ§","Ãlkan","Cepkin","Ã‡epni","Tekin","SanlÃ½soy","ÃœnnÃ¼","TÃ¼rkcan","Cansu","Ã‡Ã½nar","Ã‡al","Vardar","GÃ¶bekli","GÃ¶nÃ¼lcÃ¼" };
 
-	string Sayfalar;//İlk seçenekler
+	string Sayfalar;//Ãlk seÃ§enekler
 
 	cout << "Please choose one of the options : " << endl;
 
@@ -502,12 +502,12 @@ int main()
 
 	cin >> Sayfalar;
 
-	if (Sayfalar == "1")//İLk menü 1. seçeneğin fonksiyonu
+	if (Sayfalar == "1")//ÃLk menÃ¼ 1. seÃ§eneÃ°in fonksiyonu
 	{
 		cout << "1" << endl;
 
 
-		// ısımler ve soyadları 1. seçenek için random atar
+		// Ã½sÃ½mler ve soyadlarÃ½ 1. seÃ§enek iÃ§in random atar
 		for (int i = 0; i < 100; i++)
 		{
 			ogrenciler[i].Adi = Isimler[RandomNum(29)];
@@ -515,7 +515,7 @@ int main()
 			ogrenciler[i].Soyadi = Soyadlar[RandomNum(29)];
 		}
 
-		// notları random ve bir orana göre atama 
+		// notlarÃ½ random ve bir orana gÃ¶re atama 
 		StudentAddAverage(0, 10, 40);
 		StudentAddAverage(10, 60, 70, 40);
 		StudentAddAverage(60, 75, 80, 70);
@@ -536,11 +536,11 @@ int main()
 		return RastgeleAtama();
 	}
 
-	else if (Sayfalar == "2")//İLk menü 2. seçeneğin fonksiyonu
+	else if (Sayfalar == "2")//ÃLk menÃ¼ 2. seÃ§eneÃ°in fonksiyonu
 	{
 		cout << "2" << endl;
 
-		for (int i = 0; i < 100; i++)//2. seçenek için istenen veriler 
+		for (int i = 0; i < 100; i++)//2. seÃ§enek iÃ§in istenen veriler 
 		{ 
 			string Control;
 			cout << "Do you want to continue ? (Y,N) : " << endl;
